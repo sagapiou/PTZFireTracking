@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5C95D7B-3305-4A82-9ACC-F3676C03D2F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DomeFireTracking.My.MyApplication</StartupObject>
+    <RootNamespace>DomeFireTracking</RootNamespace>
+    <AssemblyName>DomeFireTracking</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>VC_Ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DomeFireTracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DomeFireTracking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bosch.VideoSDK.AudioLib, Version=4.20.0.1, Culture=neutral, PublicKeyToken=5f6419f50f7a5689">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Bosch\VideoSDK\Redistributables\Interop\Bosch.VideoSDK.AudioLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosch.VideoSDK.AxCameoLib, Version=4.20.0.1, Culture=neutral, PublicKeyToken=5f6419f50f7a5689">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Bosch\VideoSDK\Redistributables\Interop\Bosch.VideoSDK.AxCameoLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosch.VideoSDK.CameoLib, Version=4.20.0.1, Culture=neutral, PublicKeyToken=5f6419f50f7a5689">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Bosch\VideoSDK\Redistributables\Interop\Bosch.VideoSDK.CameoLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosch.VideoSDK.GCALib, Version=4.20.0.1, Culture=neutral, PublicKeyToken=5f6419f50f7a5689">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Bosch\VideoSDK\Redistributables\Interop\Bosch.VideoSDK.GCALib.dll</HintPath>
+    </Reference>
+    <Reference Include="IVAConnect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b201aef45ab26f45, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Virtual Controls\Setup IVA Connect\IVAConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CamConfiguration.Designer.vb">
+      <DependentUpon>CamConfiguration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CamConfiguration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cApplicationLog.vb" />
+    <Compile Include="cDevices.vb" />
+    <Compile Include="CodeFile1.vb">
+    </Compile>
+    <Compile Include="My Project\Resources2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoRoutines.vb" />
+    <Compile Include="DomeConfiguration.Designer.vb">
+      <DependentUpon>DomeConfiguration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DomeConfiguration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fireTracking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fireTracking.Designer.vb">
+      <DependentUpon>fireTracking.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApp.vb">
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="XMLVarious.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CamConfiguration.resx">
+      <DependentUpon>CamConfiguration.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomeConfiguration.resx">
+      <DependentUpon>DomeConfiguration.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fireTracking.resx">
+      <DependentUpon>fireTracking.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources2.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOConnection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\encoder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CAMEOLib">
+      <Guid>{6A79B4C7-C9A7-4BE4-A87F-7522FF68D3BC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Virtual controls logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Virtual controls logo - small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewLogoVertical.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewLogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vc.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga3.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga13.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga14.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga15.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga17.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga16.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga21.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saga20.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VC_Ico.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
